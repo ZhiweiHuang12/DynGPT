@@ -1,0 +1,22 @@
+.nbinput .prompt, .nboutput .prompt {
+    display: none; 
+}
+.math {
+    font-size: 14px !important;
+}
+
+h1 {
+    font-size: 32px; /* 调整 H1 标题大小 */
+}
+h2 {
+    font-size: 28px; /* 调整 H2 标题大小 */
+}
+h3 {
+    font-size: 24px; /* 调整 H3 标题大小 */
+}
+h4 {
+    font-size: 20px; /* 调整 H4 标题大小 */
+}
+h5 {
+    font-size: 18px; /* 调整 H5 标题大小 */
+}
