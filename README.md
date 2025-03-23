@@ -15,13 +15,13 @@ Solving the steady-state distribution of complex STNs remains challenging, as an
 ![logo](https://github.com/ZhiweiHuang12/DynGPT/blob/main/docs/_static/image/solver.jpg)
 
 ## DynGPT-Inferrer: Learning stochastic dynamic from static observed data
-Understanding how stochasticity enhances robustness and flexibility is a key focus in systems dynamics research, requiring the modeling and inference of underlying stochastic mechanisms from observed data. Leveraging a trained neural network,  DynGPT-Inferrer efficiently estimates the Bayesian posterior distributions of STNs parameters by utilizing automatic differentiation and neural approximate Bayesian computation.
+Understanding how stochasticity enhances robustness and flexibility is a key focus in systems dynamics research, requiring the modeling and inference of underlying stochastic mechanisms from observed data. Leveraging a trained neural network, DynGPT-Inferrer efficiently estimates the Bayesian posterior distributions of STNs parameters by utilizing automatic differentiation and neural approximate Bayesian computation.
 
 ![logo](https://github.com/ZhiweiHuang12/DynGPT/blob/main/docs/_static/image/inferrer.jpg)
 
 ## Installation
 
-Run the following command to create a new environment  and activate the environment. 
+Run the following command to create a new environment and activate the environment. 
 
 ```bash
 conda create --name dyngpt_env python=3.8
