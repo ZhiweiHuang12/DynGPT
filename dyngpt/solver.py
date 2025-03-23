@@ -113,7 +113,6 @@ def pre_training(config_pretrain):
 
         optimizer.step()
         ls = np.mean(loss_std_collection)
-
         loss_means.append(ls)
         print(
             f"|epoch {epoch}| cross loss: {ls:.4f}, lr: {optimizer.param_groups[0]['lr']:.8f}")
@@ -350,4 +349,3 @@ def solving_STN(model_name,params=[],initial_value=[],args=""):
     params_prompt = np.hstack((params, np.tile(args.initial_value, (params.shape[0], 1))))
     nn_sample_datas = nn_sample(params_prompt,net,args=args,param_indexs=range(0,params.shape[0],1),bs=args.batch_size,true_param=False)
     return nn_sample_datas
-
