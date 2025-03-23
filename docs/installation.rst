@@ -56,7 +56,7 @@ Now you can check if dyngpt can sucessfully import in Python:
 
    import dyngpt as dp
 
-DynGPT requires additional Julia packages for stochastic simulation of STNs.  These can be easily installed through
+DynGPT requires additional Julia packages for stochastic simulation of STNs.  These packages can be easily installed through
 following command:
 
 .. code:: bash
