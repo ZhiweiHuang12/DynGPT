@@ -116,7 +116,7 @@ def inferring_dynamics(observed_data,config_infer,gene_names=[],true_params=[],s
                     args.batch_size  = len(counts) * (args.num_species - len(observed_data_index))*2
                     loss_weight = counts/sum(counts)
 
-            es_param_all,es_loss_all,kl_divergence_val_li,best_param_li = [], [],[],[]
+            es_param_all,es_loss_all,kl_divergence_val_li,best_param_li = [],[],[],[]
             optimizer = net.configure_optimizers(args.weight_decay, args.lr,(args.beta1, args.beta2),device_type=args.device)
             for l in range(random_r0_number):
                 r0 = np.random.uniform(low=rlb_val, high=rub_val)
