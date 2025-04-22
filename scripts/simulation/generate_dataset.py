@@ -27,14 +27,10 @@ def generate_file2(param,data, data_size,init,path_flag=True):
     dataset =[[list(parameters_init_t[i]),prob_file[i]] for i in range(data_size)]
     return dataset
 
-model_type = "ostt"
-model_type = "ts_txl"
-model_type = "arl"
-
-# model_type = "sirs"
-root_path = "/GPUFS/sysu_jjzhang_1/hzw/academicCode/DynGPTTest/DynGPT/data/"
+model_type = "autoRegulationModel"
+root_path = "your/simulate/data_path/"
 single_flag = True
-if model_type=="nm_nm":
+if model_type=="NonMarkovianRNAsplicingModel":
     init = [ 1,0,0 ]
     single_flag = False
     data_train_li = [[3000,545],[2900,557],[3010,564],[3100,575],[1030,139],[910,148],[920,131],[930,142],[940,131],[950,133],[960,137],[970,127],[980,130]]
@@ -46,7 +42,7 @@ if model_type=="nm_nm":
     else:
         data_valid_li = [[68,25],[67,47],[66,35],[65,75],[64,53],[63,39],[62,53],[61,34],]
 
-elif model_type=="ts_txl":
+elif model_type=="centralDogmaModel":
     init = [1,0,0]
     data_train_li = [[40000,577],[10000,574],[4000,135],[3000,552],[5000,555]]
     single_flag = False
@@ -54,7 +50,6 @@ elif model_type=="ts_txl":
         ds_valid,valid_max_val = 1000,499
     else:
         data_valid_li = [[1000,499],[1100,500],[104,95],[103,315],[105,329]]
-
 
 elif model_type=="toggle_switch":
     init = [ 1,1,0,0 ]
@@ -65,17 +60,7 @@ elif model_type=="toggle_switch":
     else:
         data_valid_li = [[500,339],[1000,311],[600,367],[200,282]]
 
-elif model_type=="sir":
-    init = [ 10,3,0 ]
-    single_flag = False
-    ds_train,ds_valid,train_max_val,valid_max_val = 16000,1600,228,229
-    data_train_li = [[16000,228],[1100,227]]
-    if single_flag:
-        ds_valid,valid_max_val = 1600,229
-    else:
-        data_valid_li = [[1600,229],[110,196]]
-
-elif model_type=="sirs":
+elif model_type=="epidemicModel":
     init = [ 1,1,0 ]
     single_flag = False
     # ds_train,ds_valid,train_max_val,valid_max_val = 16000,1600,228,229
@@ -87,8 +72,7 @@ elif model_type=="sirs":
     else:
         data_valid_li = [[1000,176]]
 
-
-elif model_type=="afl":
+elif model_type=="autoFeedbackLoop":
     init = [0,1]
     single_flag = False
     ds_train,ds_valid,train_max_val,valid_max_val = 20000,1000,152,144,
@@ -97,7 +81,7 @@ elif model_type=="afl":
         ds_valid,valid_max_val = 1600,229
     else:
         data_valid_li = [[1000,144],[1100,142]]
-elif model_type=="arl":
+elif model_type=="autoRegulationModel":
     init = [0,1]
     single_flag = False
     data_train_li = [[20000,1054]]
@@ -109,7 +93,7 @@ elif model_type=="arl":
     else:
         data_valid_li = [[2000,353]]
 
-elif model_type=="on_off_nm": 
+elif model_type=="MarkovianRNAsplicingModel": 
     init = [1,0,0]
     ds_train,ds_valid,train_max_val,valid_max_val = 30000,1000,1386,622,
     data_train_li = [[31000,250],[11000,428],[12000,454]]
@@ -119,14 +103,6 @@ elif model_type=="on_off_nm":
     else:
         data_valid_li = [[1100,196],[900,304],[1200,389]]
 
-elif model_type=="ostt":
-    init = [1,0,0]
-    data_train_li = [[10000,535]]
-    single_flag = False
-    if single_flag:
-        ds_valid,valid_max_val = 1000,430
-    else:
-        data_valid_li = [[1000,430]]
 
 train_save_path = root_path+"{}/{}_train_stable.json".format(model_type,model_type,)
 valid_save_path = root_path+"{}/{}_valid_stable.json".format(model_type,model_type,)
