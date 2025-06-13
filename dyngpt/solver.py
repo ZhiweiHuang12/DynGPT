@@ -187,7 +187,6 @@ def fine_tune_training(config_fine_tune):
         model_state = torch.load(weight_file_path)
         net.load_state_dict(model_state["net_state_dict"])
         optimizer.load_state_dict(model_state["optimizer_state_dict"])
-        # print(f"using pretrain state for further training.")
 
     loss_means = []
     loss_stds = []
