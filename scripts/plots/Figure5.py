@@ -35,7 +35,6 @@ colors = ["#009ACE","#D22427","#FBA933","#5AE26E"]
 # Convert width to inches (1 mm = 0.0393701 inches)
 width_inch = width_mm * 0.0393701
 height_inch = width_inch * 0.26  # Height is one-fourth of the width
-# Set the size of the figure
 fig = plt.figure(figsize=(width_inch, height_inch))
 gs = GridSpec(1, 4, width_ratios=[1, 2,  10,2])
 y_ticks_li = [[], [], [], []]
