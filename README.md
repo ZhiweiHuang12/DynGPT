@@ -7,7 +7,7 @@
 </p>
 
 ## Brief introduction
-DynGPT is a GPT-driven framework designed to solve generalized multi-dimensional state transition networks (STNs) and learn stochastic dynamics from static observed data. our framework is extensible user-friendly; Users can solve their specific STNs by simply providing configuration files, allowing for the subsequent inference of the corresponding observed data. DynGPT consists of two core modules: DynGPT-Solver and DynGPT-Inferrer.
+DynGPT is a GPT-driven framework designed to solve generalized multi-dimensional state transition networks (STNs) and learn stochastic dynamics from static observed data. Our framework is extensible user-friendly. The users can solve their specific STNs by simply providing configuration files, allowing for the subsequent inference of the corresponding observed data. DynGPT consists of two core modules: DynGPT-Solver and DynGPT-Inferrer.
 
 ## DynGPT-Solver: Solving the stationary distribution of the state transition networks 
 Solving the steady-state distribution of complex STNs remains challenging, as analytical and numerical methods often demand substantial computational resources or trade accuracy for efficiency. To address this, DynGPT-Solver employs an autoregressive transformer-based architecture to efficiently solve the joint stationary distribution of multi-dimensional STNs. 
