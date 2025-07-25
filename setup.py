@@ -1,5 +1,4 @@
 from setuptools import setup, find_packages
-
 setup(
     name='dyngpt',  # Package name
     version='0.1.0',  # Version number
